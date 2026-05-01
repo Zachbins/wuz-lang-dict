@@ -24,18 +24,16 @@
         const searchInput = document.getElementById('word');
         const resultsList = document.getElementById('results');
 
-        // Lazy loading: Load dictionary after page loads
+        // Load dictionary when page loads
         window.addEventListener('load', () => {
-            setTimeout(() => {
-                dictionary = [
-                    { word: "Würz", meaning: "Root / Origin" },
-                    { word: "Grevein", meaning: "Language / Tongue" },
-                    { word: "Hallo", meaning: "Hello" },
-                    { word: "Welt", meaning: "World" },
-                    { word: "Buch", meaning: "Book" }
-                ];
-                resultsList.innerHTML = '<li>Dictionary loaded! Start typing to search.</li>';
-            }, 1000); // 1 second delay for lazy loading effect
+            dictionary = [
+                { word: "Würz", meaning: "Root / Origin" },
+                { word: "Grevein", meaning: "Language / Tongue" },
+                { word: "Hallo", meaning: "Hello" },
+                { word: "Welt", meaning: "World" },
+                { word: "Buch", meaning: "Book" }
+            ];
+            displayResults(dictionary); // Display all words initially
         });
 
         function displayResults(results) {
