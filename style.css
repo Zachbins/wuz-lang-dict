@@ -10,7 +10,9 @@ nav ul {
 }
 
 
-
+li {
+  margin-top: 5px;
+}
 
 a {
   background-color: transparent;
