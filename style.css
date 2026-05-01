@@ -31,9 +31,13 @@ nav ul li {
 }
 
 * {
-  background-color: #121212;
+  font-family: Arial, sans-serif;
+}
 
-  font-family: Arial;
+body {
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
 }
 
 .wordcount {
@@ -59,6 +63,8 @@ h2 {
 
 .searchbar {
   caret-color: white;
+  caret-animation: manual;
+  animation: smoothCaret 1.2s ease-in-out infinite;
   width: 960px;
   font-size: 17px;
   height: 36px;
@@ -77,6 +83,24 @@ h2 {
   margin: 0 auto;
 }
 
+#results li {
+  animation: unblurAndDrop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  background-color: #1e1e1e;
+  margin-top: 12px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid #2e2e2e;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#results li:hover {
+  transform: translateY(-3px);
+  background-color: #252525;
+  border-color: #4e4e4e;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
 #results {
   line-height: 1.5;
   list-style-type: none;
@@ -85,4 +109,41 @@ h2 {
   width: 1006px;
   margin: 0 auto;
   padding: 0;
+}
+
+@keyframes unblurAndDrop {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+#results li {
+  animation: unblurAndDrop 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes slide-down-unblur {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+#results li {
+  animation: slide-down-unblur 0.4s ease-out forwards;
+  opacity: 0;
 }
