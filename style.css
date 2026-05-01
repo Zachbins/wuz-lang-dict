@@ -7,9 +7,6 @@ nav ul {
 
   margin-top: 5px;
   font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -31,9 +28,12 @@ nav ul li {
   margin-top: 5px;
 }
 
-.about-link {
-  margin-left: auto;
-  margin-right: 20px;
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
 }
 
 * {
