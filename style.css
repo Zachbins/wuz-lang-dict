@@ -8,7 +8,7 @@ nav ul {
   margin-top: 5px;
   font-size: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -26,14 +26,8 @@ a {
 nav ul li {
   background: transparent;
   color:white;
-  display: inline;
   margin-right: 20px; 
   margin-top: 5px;
-}
-
-.right {
-  margin-left: auto;
-  margin-right: 20px;
 }
 
 * {
