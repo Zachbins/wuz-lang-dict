@@ -70,7 +70,7 @@ h2 {
   list-style-type: none;
   text-align: left;
   color: white;
-  width: 1000px;
-  margin-left: calc((100vw - 1000px) / 2);
-  margin-right: auto;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
 }
