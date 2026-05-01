@@ -165,6 +165,17 @@ h2 {
   font-weight: bold;
 }
 
+.CopyButton {
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  background-color: #1e1e1e;
+  border: 1px solid #2e2e2e;
+  text-decoration: none;
+}
+
 .donate-btn:hover {
   transform: translateY(-3px);
   background-color: #252525;
