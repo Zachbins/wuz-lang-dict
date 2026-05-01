@@ -5,6 +5,11 @@ nav ul {
 }
 
 nav ul li {
-  display: inline; /* Display items in a row */
-  margin-right: 20px; /* Space between items */
+  display: inline;
+  margin-right: 20px; 
+}
+
+* {
+  background-color: #121212;
+  font-family: Arial;
 }
