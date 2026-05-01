@@ -71,5 +71,6 @@ h2 {
   text-align: left;
   color: white;
   width: 1000px;
-  margin: 0 auto;
+  margin-left: calc((100vw - 1000px) / 2);
+  margin-right: auto;
 }
