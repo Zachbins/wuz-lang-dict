@@ -85,5 +85,5 @@ h2 {
   width: 960px;
   margin-left: calc((100vw - 960px) / 2);
   margin-right: auto;
-  padding: 0;
+  padding: 0 0 0 46px;
 }
