@@ -12,7 +12,9 @@ nav ul li {
   margin-right: 20px; 
 }
 
-
+.left {
+  float:left;
+}
 
 * {
   background-color: #121212;
