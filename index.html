@@ -10,8 +10,52 @@
 
 <body>
     <h2>Würzengrevein Language Dictionary</h2>
-    <input type="text" name="word" id="word" placeholder="search">
+    <input type="text" name="word" id="word" placeholder="Search For Words in the dictionary.">
+    <ul id="results"></ul>
 
+    <script>
+        const dictionary = [
+            { word: "Würz", meaning: "Root / Origin" },
+            { word: "Grevein", meaning: "Language / Tongue" },
+            { word: "Hallo", meaning: "Hello" },
+            { word: "Welt", meaning: "World" },
+            { word: "Buch", meaning: "Book" }
+        ];
+
+        const searchInput = document.getElementById('word');
+        const resultsList = document.getElementById('results');
+
+        function displayResults(results) {
+            resultsList.innerHTML = '';
+
+            if (results.length === 0) {
+                resultsList.innerHTML = '<li>No results found</li>';
+                return;
+            }
+
+            results.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `<strong>${item.word}</strong>: ${item.meaning}`;
+                resultsList.appendChild(li);
+            });
+        }
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+                resultsList.innerHTML = '';
+                return;
+            }
+
+            const filteredResults = dictionary.filter(item =>
+                item.word.toLowerCase().includes(searchTerm) ||
+                item.meaning.toLowerCase().includes(searchTerm)
+            );
+
+            displayResults(filteredResults);
+        });
+    </script>
 </body>
 
 </html>
