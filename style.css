@@ -74,7 +74,7 @@ h2 {
   border-color: transparent;
   position: sticky;
   display: block;
-  margin: 0;
+  margin: 0 auto;
 }
 
 #results {
@@ -83,6 +83,6 @@ h2 {
   text-align: left;
   color: white;
   width: 960px;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
