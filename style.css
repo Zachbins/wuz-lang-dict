@@ -37,8 +37,9 @@ nav ul li {
 }
 
 .wordcount {
-  color:#292929;
+  color:#4e4e4e;
   display: block;
+  text-align:center;
 }
 
 p,
