@@ -60,12 +60,12 @@ h2 {
 .searchbar {
   caret-color: white;
   width:960px;
-  font-size: 20px;
+  font-size: 17px;
   height:36px;
   color: white;
   text-decoration-color: white;
   border-radius: 10px;
-  background-color: #292929;
+  background-color: #181818;
   border-color: transparent;
   position: sticky;
   display: block;
