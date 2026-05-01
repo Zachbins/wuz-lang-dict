@@ -13,3 +13,14 @@ nav ul li {
   background-color: #121212;
   font-family: Arial;
 }
+
+p,
+h1,
+h2,
+h3 {
+    line-height: 1.5;
+    font: size 22px;
+    color: white;
+    position: relative;
+    z-index: 10;
+}
