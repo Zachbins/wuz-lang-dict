@@ -9,7 +9,7 @@
 </head>
 
 <body>
-        <nav>
+    <nav>
         <ul>
             <li><a href="/"></strong>Wüzengrevein Dictionary</strong></a></li>
             <li><a href="about.html"></strong>About</strong></a></li>
@@ -31,7 +31,7 @@
             wordCount.textContent = count;
         }
 
-     
+
         window.addEventListener('load', () => {
             dictionary = [
                 { word: "Würz", meaning: "Root / Origin", pos: "noun", pronunciation: "/vʏrts/" },
@@ -40,8 +40,8 @@
                 { word: "Welt", meaning: "World", pos: "noun", pronunciation: "/vɛlt/" },
                 { word: "Buch", meaning: "Book", pos: "noun", pronunciation: "/buːx/" }
             ];
-            dictionary.sort((a, b) => a.word.localeCompare(b.word)); 
-            displayResults(dictionary); 
+            dictionary.sort((a, b) => a.word.localeCompare(b.word));
+            displayResults(dictionary);
         });
 
         function displayResults(results) {
@@ -53,8 +53,9 @@
                 return;
             }
 
-            results.forEach(item => {
+            results.forEach((item, index) => {
                 const li = document.createElement('li');
+                li.style.animationDelay = `${index * 0.05}s`;
                 li.innerHTML = `<strong>${item.word}</strong> <small style="color:#81AEC7;">(${item.pos})</small>: ${item.meaning} <span style="color:#B5B0B0;">${item.pronunciation}</span>`;
                 resultsList.appendChild(li);
             });

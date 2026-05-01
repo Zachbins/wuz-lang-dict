@@ -25,43 +25,43 @@ a {
 
 nav ul li {
   background: transparent;
-  color:white;
-  margin-right: 20px; 
+  color: white;
+  margin-right: 20px;
   margin-top: 5px;
 }
 
 * {
   background-color: #121212;
-  
+
   font-family: Arial;
 }
 
 .wordcount {
-  color:#4e4e4e;
+  color: #4e4e4e;
   display: block;
-  text-align:center;
+  text-align: center;
 }
 
 p,
 h1,
 h2,
 h3 {
-    line-height: 1.5;
-    font: size 22px;
-    color: white;
-    position: relative;
-    z-index: 10;
+  line-height: 1.5;
+  font: size 22px;
+  color: white;
+  position: relative;
+  z-index: 10;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .searchbar {
   caret-color: white;
-  width:960px;
+  width: 960px;
   font-size: 17px;
-  height:36px;
+  height: 36px;
   color: white;
   text-decoration-color: white;
   border-radius: 10px;
@@ -85,4 +85,39 @@ h2 {
   width: 1006px;
   margin: 0 auto;
   padding: 0;
+}
+
+@keyframes custom-caret-animation {
+  from {
+    caret-color: transparent;
+  }
+
+  to {
+    caret-color: darkblue;
+  }
+}
+
+.custom-caret {
+  animation: custom-caret-animation infinite linear alternate 0.75s;
+  caret-color: darkblue;
+  caret-animation: manual;
+  /* Stops default blinking */
+}
+
+#results li {
+  opacity: 0;
+  animation: dropdown-unblur 0.4s ease-out forwards;
+}
+
+@keyframes dropdown-unblur {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
