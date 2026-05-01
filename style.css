@@ -47,11 +47,18 @@ h3 {
     z-index: 10;
 }
 
+h2 {
+    text-align: center;
+}
+
 .searchbar {
+  
   width:210px;
   height:36px;
   border-radius: 2px;
   background-color: #292929;
   border-color: transparent;
   position: sticky;
+  display: block;
+  margin: 0 auto;
 }
