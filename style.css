@@ -4,7 +4,6 @@ nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  position: sticky;
 }
 
 nav ul li {
@@ -37,4 +36,5 @@ h3 {
   border-radius: 2px;
   background-color: #292929;
   border-color: transparent;
+  position: sticky;
 }
