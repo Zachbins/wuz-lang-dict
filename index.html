@@ -16,13 +16,20 @@
         </ul>
     </nav>
     <h2>Würzengrevein Language Dictionary</h2>
+    <p>Words In The Dictionary: <span id="word-count">0</span></p>
     <input class="searchbar" type="text" name="word" id="word" placeholder="Search For Words in the dictionary.">
+    <br>
     <ul id="results"></ul>
 
     <script>
         let dictionary = [];
         const searchInput = document.getElementById('word');
         const resultsList = document.getElementById('results');
+        const wordCount = document.getElementById('word-count');
+
+        function updateWordCount(count) {
+            wordCount.textContent = count;
+        }
 
      
         window.addEventListener('load', () => {
@@ -39,6 +46,7 @@
 
         function displayResults(results) {
             resultsList.innerHTML = '';
+            updateWordCount(results.length);
 
             if (results.length === 0) {
                 resultsList.innerHTML = '<li>No results found</li>';
@@ -56,7 +64,7 @@
             const searchTerm = e.target.value.toLowerCase().trim();
 
             if (searchTerm === '') {
-                resultsList.innerHTML = '';
+                displayResults(dictionary);
                 return;
             }
 
