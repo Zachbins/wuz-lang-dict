@@ -20,16 +20,23 @@
     <ul id="results"></ul>
 
     <script>
-        const dictionary = [
-            { word: "Würz", meaning: "Root / Origin" },
-            { word: "Grevein", meaning: "Language / Tongue" },
-            { word: "Hallo", meaning: "Hello" },
-            { word: "Welt", meaning: "World" },
-            { word: "Buch", meaning: "Book" }
-        ];
-
+        let dictionary = [];
         const searchInput = document.getElementById('word');
         const resultsList = document.getElementById('results');
+
+        // Lazy loading: Load dictionary after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                dictionary = [
+                    { word: "Würz", meaning: "Root / Origin" },
+                    { word: "Grevein", meaning: "Language / Tongue" },
+                    { word: "Hallo", meaning: "Hello" },
+                    { word: "Welt", meaning: "World" },
+                    { word: "Buch", meaning: "Book" }
+                ];
+                resultsList.innerHTML = '<li>Dictionary loaded! Start typing to search.</li>';
+            }, 1000); // 1 second delay for lazy loading effect
+        });
 
         function displayResults(results) {
             resultsList.innerHTML = '';
