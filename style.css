@@ -63,7 +63,6 @@ h2 {
 
 .searchbar {
   caret-color: white;
-  caret-animation: manual;
   animation: smoothCaret 1.2s ease-in-out infinite;
   width: 960px;
   font-size: 17px;
