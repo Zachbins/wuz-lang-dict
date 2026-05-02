@@ -33,7 +33,7 @@
         }
 
 
-        window.addEventListener('load', () => {
+        window.addEventListener('dictionaryReady', () => {
             dictionary.sort((a, b) => a.word.localeCompare(b.word));
             displayResults(dictionary);
         });
